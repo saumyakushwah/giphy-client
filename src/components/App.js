@@ -14,7 +14,7 @@ class App extends React.Component {
     this.setState({ images: response.data.results });
   };
 
-  render() {
+  render() { 
     return (
       <div className="ui container" style={{ marginTop: "20px" }}>
         <SearchBar onSubmit={this.onSearchSubmit} />
