@@ -1,41 +1,31 @@
-import React from 'react'
+import React from "react";
 
-class ImageCard extends React.Component{
+class ImageCard extends React.Component {
+  // constructor(props) {
+  //   super(props);
 
-  constructor(props){
-    super(props);
+  //   // this.state = { spans: 0 };
 
-    this.state = {spans: 0};
+  //   this.imageRef = React.createRef();
+  // }
 
-    this.imageRef = React.createRef();
-  }
+  // componentDidMount() {
+  // this.imageRef.current.addEventListener("load", this.setSpans);
+  // console.log(this.imageRef.current.clientHeight); p.s. this works fine for me
+  // }
 
-  componentDidMount(){
-    this.imageRef.current.addEventListener('load', this.setSpans)
-    // console.log(this.imageRef.current.clientHeight); p.s. this works fine for me
-  }
+  // setSpans = () => {
+  //   const height = this.imageRef.current.clientHeight;
 
-  setSpans = () => {
-    const height = this.imageRef.current.clientHeight;
+  //   const spans = Math.ceil(height / 10 + 1);
 
-    const spans = Math.ceil(height / 10 + 1);
+  //   this.setState({ spans });
+  // };
 
-    this.setState({spans});
-  }
+  render() {
+    // const {description, urls} = this.props.image;
 
-  render(){
-
-    const {description, urls} = this.props.image;
-
-    return(
-      <div style={{gridRowEnd: `span ${this.state.spans}`}}>
-        <img 
-        ref={this.imageRef}
-        alt={description}
-        src={urls.regular}
-        />
-      </div>
-    );
+    return <img alt="giphy" src={this.props.image} />;
   }
 }
 

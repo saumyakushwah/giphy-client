@@ -1,4 +1,53 @@
-.image-list{
+.row {
+  display: flex;
+}
+
+.col {
+  flex: 1;
+  padding: 0 8px;
+}
+
+.col img {
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.main-title {
+  text-align: center;
+  font-size: 64px;
+  margin-bottom: 32px;
+  font-family: "Architects Daughter", sans-serif;
+  color: teal;
+  transition: all 0.2s ease;
+}
+
+.ui.input {
+  width: 100%;
+}
+
+.main-container {
+  padding-top: 32px;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+}
+.main-container.collapse {
+  height: 150px;
+}
+.main-container.expand {
+  height: 80vh;
+}
+/* .image-list{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 0 10px;
@@ -8,4 +57,4 @@
 .image-list img{
   width: 250px;
   grid-row-end: span 2;
-}
+} */

@@ -3,7 +3,7 @@ import React from "react";
 class SearchBar extends React.Component {
   state = { term: "" };
 
-  onFormSUbmit = (event) => {
+  onSubmit = (event) => {
     event.preventDefault();
 
     this.props.onSubmit(this.state.term);
@@ -12,9 +12,9 @@ class SearchBar extends React.Component {
   render() {
     return (
       <div className="ui segment"> 
-        <form onSubmit={this.onFormSUbmit} className="ui form">
+        <form onSubmit={this.onSubmit} className="ui form">
           <div className="field">
-            <label>Image Search</label>
+            <label>Giphy Search</label>
             <input
               type="text"
               value={this.state.term}
