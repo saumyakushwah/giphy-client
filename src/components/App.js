@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import _ from "lodash";
 import axios from "axios";
 import ImageList from "./ImageList";
-import { Search, Header, Grid, Container } from "semantic-ui-react";
+import { Search, Container } from "semantic-ui-react";
 
 const API_KEY = "YcbWhmP6SZVzHoQL9751ByD02xjzwf2D";
 
